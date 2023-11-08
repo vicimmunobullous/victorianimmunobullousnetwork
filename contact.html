@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure you link to your CSS file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <section class="contact-form-section">
+            <form id="contact-form" action="your-server-side-processing-url" method="post">
+                <div class="input-group">
+                    <label for="name" class="contact-label">Name</label>
+                    <input type="text" id="name" name="name" class="contact-input" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email" class="contact-label">Email</label>
+                    <input type="email" id="email" name="email" class="contact-input" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message" class="contact-label">Message</label>
+                    <textarea id="message" name="message" class="contact-textarea" rows="6" required></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <button type="submit" class="contact-submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Victorian Immunobullous Network. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
