@@ -1,0 +1,123 @@
+#opening-screen {
+    height: 100vh;
+    background-image: url('images/headerbackground.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it's on top of other content */
+    opacity: 1;
+    transition: opacity 3s ease;
+  }
+  
+  .openingtext {
+    margin-top: 1rem;
+      margin-bottom: 0px;
+      color: #fff;
+      font-size: 4rem;
+      line-height: 1.2;
+      font-weight: bold;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 8px 8px 16px rgba(0, 0, 0, 0.25);
+      letter-spacing: 1px;
+  }
+  
+  .animation-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .white-stripe {
+    position: absolute;
+    top: 35%; /* Adjust the position as needed, placing it above the text */
+    left: -50%; /* Start from the left of the screen */
+    width: 100%;
+    height: 10px; /* Adjust the height of the stripe */
+    background-color: #fff;
+    transform: translateY(-50%); /* Center the stripe vertically */
+    animation: moveStripe 4s forwards; /* Adjust duration for a slower movement */
+  }
+  
+  @keyframes moveStripe {
+    0% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+  }
+  
+   .openingtext h1, 
+   .openingtext h2 {
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .openingtext h1 {
+    animation: slideInLeft 1s forwards;
+  }
+  
+  .openingtext h2 {
+    animation: slideInUp 1s forwards 1s;
+  }
+  .openingtext h3 {
+    animation: slideInUp 1s forwards 1s;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Ripple Effect */
+  #opening-screen::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at left center, transparent 10%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 80%);
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: ripple 4s forwards; /* Slower and delayed start for ripple */
+  }
+  
+  @keyframes ripple {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1.5);
+    }
+    100% {
+        transform: translateX(100%) scaleX(0);
+        opacity: 0;
+    }
+  }
+  
+  
+  #main-content {
+    display: none; /* Initially hide the main content */
+    /* Add any styles you want for your main content */
+  }

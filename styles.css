@@ -1,0 +1,302 @@
+/* Base colors inspired by professional dermatology websites */
+:root {
+    --primary-color: #f40e2f; /* A calming blue shade */
+    --secondary-color: rgba(57, 56, 56, 0.766); /* Lighter blue for a soothing effect */
+    --accent-color: #6b6464; /* A darker, grounding accent color */
+    --background-color: #ffffffb0; /* A very light gray, almost white, background */
+    --text-color: #333333; /* A dark gray that is softer than black */
+}
+
+/* Apply the background and text colors to the body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Style the header with the primary color */
+header {
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('images/headerbackground.png'); /* Link to your image */
+    background-size: cover;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 8px 8px 16px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1px;
+}
+
+nav {
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.97);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .menu li {
+    display: inline;
+    margin: 0 1.5rem;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+
+  .menu a:hover::after {
+    transform: scaleX(1);
+  }
+
+/* Style the sections with a white background to stand out from the body background */
+section {
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 960px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the footer with the accent color */
+footer {
+    background-image: linear-gradient(to right, #ff43b4a0, #f40e3098);
+    color: white;
+    padding: 1em 0;
+}
+
+/* Center images and give them a soft border */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50px;
+}
+
+.welcomeimg {
+    border-radius: 5px;
+    border: 2px solid var(--secondary-color);
+}
+
+#nav-logo {
+    height: 70px; /* Adjust the size as needed */
+    margin-right: 50px; /* Creates space between the logo and the nav items */
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box; /* Apply border-box model to all elements */
+}
+
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-label {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.contact-submit {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.contact-submit:hover {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    border: 2px solid #333;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+/* You can adjust colors, fonts, and spacing according to your design preferences */
+
+
+/* Style for the search container */
+#search-container {
+    margin: 2em auto;
+    width: 50%; /* Adjust as necessary */
+    text-align: center;
+}
+
+/* Style for the search input */
+#search-bar {
+    padding: 1em;
+    margin-right: 0.5em;
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Style for the table */
+#members-table {
+    width: 80%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+/* Style for the table headers */
+#members-table th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75em;
+}
+
+/* Style for the table cells */
+#members-table td {
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the table rows */
+#members-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#members-table tr:nth-child(odd) {
+    background-color: #d8d8d8;
+}
+
+#members-table tr:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.fbutton {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--background-color);
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.fbutton:hover {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    vertical-align: middle;
+}
+
+.welcome p {
+    font-size: 20px;
+    line-height: 2;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+  }
